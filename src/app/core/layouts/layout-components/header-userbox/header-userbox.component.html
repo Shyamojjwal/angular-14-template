@@ -1,0 +1,14 @@
+<div class="position-relative">
+  <a class="nav-icon pe-md-0 dropdown-toggle" href="javascript:void(0);" (click)="toogleMenuOpt()">
+    <img src="/assets/img/avatars/avatar.jpg" class="avatar img-fluid rounded" alt="Charles Hall">
+  </a>
+  <div class="dropdown-menu dropdown-menu-end" [ngClass]="{'show': isShownMenuOpt}">
+    <a class="dropdown-item" href="pages-profile.html"><i class="bi bi-person-circle"></i> Profile</a>
+    <a class="dropdown-item" href="javascript:void(0);"><i class="bi bi-pie-chart"></i> Analytics</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="pages-settings.html"><i class="bi bi-shield-check"></i> Privacy</a>
+    <a class="dropdown-item" href="javascript:void(0);"><i class="bi bi-info-circle"></i> Help Center</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="javascript:void(0);"><i class="bi bi-box-arrow-left"></i>Log out</a>
+  </div>
+</div>

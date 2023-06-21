@@ -1,0 +1,65 @@
+<div class="position-relative">
+  <a class="nav-icon dropdown-toggle" href="javascript:void(0);" (click)="toogleMenuOpt()">
+    <div class="position-relative">
+      <i class="bi bi-bell"></i>
+      <span class="indicator">4</span>
+    </div>
+  </a>
+  <div class="dropdown-menu dropdown-menu-lg py-0" [ngClass]="{'show': isShownMenuOpt}">
+    <div class="dropdown-menu-header">
+      4 New Notifications
+    </div>
+    <div class="list-group">
+      <a href="javascript:void(0);" class="list-group-item">
+        <div class="row g-0 align-items-center">
+          <div class="col-2">
+            <i class="bi bi-exclamation-circle color-red"></i>
+          </div>
+          <div class="col-10">
+            <div class="text-dark">Update completed</div>
+            <div class="text-muted small mt-1">Restart server 12 to complete the update.</div>
+            <div class="text-muted small mt-1">30m ago</div>
+          </div>
+        </div>
+      </a>
+      <a href="javascript:void(0);" class="list-group-item">
+        <div class="row g-0 align-items-center">
+          <div class="col-2">
+            <i class="bi bi-bell color-yellow"></i>
+          </div>
+          <div class="col-10">
+            <div class="text-dark">Lorem ipsum</div>
+            <div class="text-muted small mt-1">Aliquam ex eros, imperdiet vulputate hendrerit et.</div>
+            <div class="text-muted small mt-1">2h ago</div>
+          </div>
+        </div>
+      </a>
+      <a href="javascript:void(0);" class="list-group-item">
+        <div class="row g-0 align-items-center">
+          <div class="col-2">
+            <i class="bi bi-house-door color-blue"></i>
+          </div>
+          <div class="col-10">
+            <div class="text-dark">Login from 192.186.1.8</div>
+            <div class="text-muted small mt-1">5h ago</div>
+          </div>
+        </div>
+      </a>
+      <a href="javascript:void(0);" class="list-group-item">
+        <div class="row g-0 align-items-center">
+          <div class="col-2">
+            <i class="bi bi-person-plus color-green"></i>
+          </div>
+          <div class="col-10">
+            <div class="text-dark">New connection</div>
+            <div class="text-muted small mt-1">Christina accepted your request.</div>
+            <div class="text-muted small mt-1">14h ago</div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="dropdown-menu-footer">
+      <a href="javascript:void(0);" class="text-muted">Show all notifications</a>
+    </div>
+  </div>
+</div>

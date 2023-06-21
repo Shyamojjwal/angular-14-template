@@ -1,0 +1,25 @@
+<div class="sidebar-user">
+  <div class="d-flex justify-content-center">
+    <div class="flex-shrink-0">
+      <img src="/assets/img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1" alt="Charles Hall">
+    </div>
+    <div class="flex-grow-1 ps-2 position-relative" #toggleMenuSec>
+      <a class="sidebar-user-title dropdown-toggle" [ngClass]="{'menu-open':isUserMenuOpen}" href="javascript:void(0);"
+        data-bs-toggle="dropdown" aria-expanded="false" (click)="toogleMenuBtn();" #toggleButton>
+        <!-- Charles Hall -->
+        {{userInfo.customerName}}
+      </a>
+      <div class="dropdown-menu" [ngClass]="{'menu-open':isUserMenuOpen}" #menuOpt>
+        <!-- <a class="dropdown-item" href="javascript:void(0);"><i class="bi bi-person-circle"></i> Profile</a>
+        <a class="dropdown-item" href="javascript:void(0);"><i class="bi bi-pie-chart"></i> Analytics</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="javascript:void(0);"><i class="bi bi-shield-check"></i>Privacy</a>
+        <a class="dropdown-item" href="javascript:void(0);"><i class="bi bi-info-circle"></i> Help Center</a>
+        <div class="dropdown-divider"></div> -->
+        <a class="dropdown-item" href="javascript:void(0);" (click)="userSignOut();"><i class="bi bi-box-arrow-left"></i>Log out</a>
+      </div>
+
+      <div class="sidebar-user-subtitle">Designer</div>
+    </div>
+  </div>
+</div>

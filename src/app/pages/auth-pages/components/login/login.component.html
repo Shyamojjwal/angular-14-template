@@ -1,0 +1,48 @@
+<div class="card bg-glass">
+  <div class="card-body">
+    <h2 class="fw-bold text-center">Sign In</h2>
+    <div class="form-container p-4">
+      <form [formGroup]="userForm" (ngSubmit)="userSignIn()">
+        <div class="row">
+          <div class="mb-3 col-lg-12">
+            <label>User Name</label>
+            <input type="text" formControlName="username" placeholder="User Name" class="form-control" (focusout)="validateUser()"
+              [readOnly]="isFormReadOnly">
+            <span class="err-msg">{{ validationMessages?.username }}</span>
+          </div>
+          <div class="mb-3 col-lg-12">
+            <label>Password</label>
+            <input type="password" formControlName="password" placeholder="Password" class="form-control" (focusout)="validateUser()"
+              [readOnly]="isFormReadOnly">
+              <span class="err-msg">{{ validationMessages?.password }}</span>
+          </div>
+          <div class="mb-3 col-lg-12">
+            <label>OTP Token</label>
+            <input type="text" formControlName="token" placeholder="OTP Token" class="form-control" (focusout)="validateUser()"
+              [readOnly]="isFormReadOnly">
+              <span class="err-msg">{{ validationMessages?.token }}</span>
+          </div>
+          <div class="mb-3 col-lg-12">
+            <div class="row">
+              <!-- <div class="col-lg-6">
+                <div class="checkbox-rect">
+                  <input type="checkbox" id="checkbox-rect1" name="check">
+                  <label for="checkbox-rect1">Remember Me</label>
+                </div>
+              </div> -->
+              <div class="col-lg-6">
+                <a class="fp-sec">Forgot Password?</a>
+              </div>
+              <div class="col-lg-6">
+                <button class="btn btn-outline-primary full-width" type="submit" [disabled]="isFormSubmitted">Sign In</button>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="btn-grp col-lg-12">
+            <button class="btn btn-outline-primary full-width" type="submit" [disabled]="isFormSubmitted">Sign In</button>
+          </div> -->
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

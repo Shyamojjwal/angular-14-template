@@ -1,0 +1,31 @@
+<ul class="sidebar-nav">
+
+  <ng-container *ngFor="let _menu of menuItems; let _k=index;">
+    <li [ngClass]="{'sidebar-header': _menu?.isHeader, 'sidebar-item': !_menu?.isHeader}">
+
+      <ng-container *ngIf="_menu?.isHeader">
+        {{_menu.title}}
+      </ng-container>
+
+      <ng-container *ngIf="!_menu?.isHeader && (!_menu?.subMenu || _menu?.subMenu?.length == 0)">
+        <a class="sidebar-link" [routerLink]="[_menu.link]" routerLinkActive="active">
+          <i class="{{_menu.icon}} align-middle"></i> <span class="align-middle">{{_menu.title}}</span>
+        </a>
+      </ng-container>
+
+      <ng-container *ngIf="!_menu?.isHeader && _menu?.subMenu?.length > 0">
+        <a class="sidebar-link sidebar-dropdown-btn" (click)="toogleSubMenu(_k)"
+          [ngClass]="{'expanded': (openMenuIndex == _k)}">
+          <i class="{{_menu.icon}} align-middle"></i> <span class="align-middle">{{_menu.title}}</span>
+        </a>
+
+        <ul class="sidebar-dropdown list-unstyled" *ngIf="openMenuIndex == _k" [@dropDownMenu]>
+          <li class="sidebar-item menu-item" *ngFor="let _subItem of _menu?.subMenu">
+            <a class="sidebar-link" [routerLink]="[_subItem.link]" routerLinkActive="active">{{_subItem.title}}</a>
+          </li>
+        </ul>
+      </ng-container>
+
+    </li>
+  </ng-container>
+</ul>

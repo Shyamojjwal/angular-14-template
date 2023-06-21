@@ -1,0 +1,26 @@
+@media(min-width: 768px) {
+  .content {
+    max-width: auto;
+    width: auto
+  }
+}
+
+@media(max-width: 425px) {
+  .navbar .nav-item {
+    &.noti-box .dropdown-menu {
+      right: -120px;
+    }
+    &.msg-box .dropdown-menu {
+      right: -74px;
+    }
+    &.user-box .dropdown-menu {
+      right: -13px;
+    }
+  }
+}
+
+@media(min-width: 992px) {
+  .content {
+    padding: 3rem 3rem 1.5rem !important
+  }
+}
